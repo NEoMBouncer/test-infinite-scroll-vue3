@@ -1,7 +1,21 @@
-# Vue 3 + Vite
+## Authors:
+[Igor Zhuravlev](https://github.com/NEoMBouncer)
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Demo:
+[Demo](/)
 
-## Recommended IDE Setup
+## Recommended:
+- [npm](https://www.npmjs.com/)
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+## Install:
+```
+$ npm install
+$ npm run dev
+```
+
+## Usage:
+[http://localhost:3000](http://localhost:3000)
+
+## Stack:
+- [Vue-3](https://vuejs.org/)
+- [ViteJS](https://vitejs.dev/)
