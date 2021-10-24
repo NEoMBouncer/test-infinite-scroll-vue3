@@ -1,9 +1,11 @@
 {
   "name": "test-infinite-scroll-vue3",
+  "author": "Igor Zhuravlev",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "doc": "jsdoc src -r -c jsdoc.conf.js -d docs/docs --pedantic",
     "serve": "vite preview"
   },
   "dependencies": {
