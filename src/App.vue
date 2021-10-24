@@ -25,22 +25,39 @@ export default {
     Card
   },
   setup() {
-    // Date
+    /**
+     * App.vue Date
+     * @vue-data {array} [posts = []] a list of users
+     * @vue-data {array} [resPosts = []] new users when scrolling
+     * @vue-data {scrollComponent} [scrollComponent = null] use scrollComponent
+     */
     const posts = ref([])
     const resPosts = ref([])
     const scrollComponent = ref(null)
 
+    /**
+     * Adding a list of users when requesting an API
+     */
     getPosts()
         .then(res => res)
         .then(data => posts.value = data);
 
+    /**
+     * function of adding to the list of users when scrolling
+     */
     const loadMorePosts = async() => {
+      // API request call
      await getPosts()
           .then(res => res)
           .then(data => resPosts.value = data);
+     // change of date
       let newPosts = resPosts.value
       posts.value = [...posts.value, ...newPosts];
     }
+    /**
+     * function of throttle Scroll
+     * @return {Function} Returns throttle function.
+     */
     const throttle = (fn, wait) => {
       let time = Date.now();
       return function() {
@@ -51,21 +68,37 @@ export default {
       }
     }
 
-    const handleScroll = (e) => {
+    /**
+     * function of call infitite scroll
+     */
+    const handleScroll = () => {
       let element = scrollComponent.value
+      // checking indentation for a function call
       if ( element.getBoundingClientRect().bottom - 30 < window.innerHeight) {
         loadMorePosts()
       }
     }
 
+    /**
+     * App.vue `onMounted` hook
+     * @description function call on page load
+     */
     onMounted( () => {
       window.addEventListener("scroll", throttle(handleScroll, 100))
     })
 
+    /**
+     * App.vue `onUnmounted` hook
+     * @description function call when scrolling the page
+     */
     onUnmounted(() => {
       window.removeEventListener("scroll", handleScroll)
     })
 
+    /**
+     * App.vue Date call
+     * @return {posts, scrollComponent} Returns
+     */
     return {
       posts,
       scrollComponent

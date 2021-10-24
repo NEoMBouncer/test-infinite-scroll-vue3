@@ -1,0 +1,22 @@
+// * Config
+@import 'config/_variables.scss';
+@import 'config/_vendor';
+@import 'config/_fonts';
+@import 'helpers/_helpers';
+@import 'UI/_typography';
+@import 'UI/_form';
+
+// * Common
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  flex: 1 0;
+  height: 100%;
+}

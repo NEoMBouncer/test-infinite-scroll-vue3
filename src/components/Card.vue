@@ -1,17 +1,4 @@
 <template>
-<!--  <div class="space-y-6">-->
-<!--    <img-->
-<!--        class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"-->
-<!--        :src="post.imageUrl"-->
-<!--        alt="avatar-img"-->
-<!--    />-->
-<!--    <div class="space-y-2">-->
-<!--      <div class="text-lg leading-6 font-medium space-y-1">-->
-<!--        <h3>{{ post.name }}</h3>-->
-<!--        <p class="text-indigo-600">{{ post.email }}</p>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
   <div class="space-y-6 xl:space-y-10">
     <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" :src="post.imageUrl" alt="avatar-img" />
     <div class="space-y-2 xl:flex xl:items-center xl:justify-between">
@@ -24,6 +11,17 @@
 </template>
 
 <script>
+
+/**
+ * @module components/Card
+ * @desc Card component for render user data
+ * @vue-prop {Object} user List item of users
+ * @vue-data post: {
+ *    name: {String},
+ *    email: {String},
+ *    imageUrl: {String}
+ * }
+ */
 
 export default {
   name: "Card",

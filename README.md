@@ -2,7 +2,7 @@
 [Igor Zhuravlev](https://github.com/NEoMBouncer)
 
 ## Demo:
-[Demo](/)
+[Demo](https://neombouncer.github.io/test-infinite-scroll-vue3/)
 
 ## Recommended:
 - [npm](https://www.npmjs.com/)
